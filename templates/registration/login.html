@@ -1,6 +1,19 @@
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <inpu type ='submit' value="login">
-</form>
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+{% block page_titel %}
+    LOGIN PAGE
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>LOGIN PAGE</h1>
+    <form action="" method="post" class="my-class">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <inpu type='submit' value="login">
+    </form>
+{% endblock %}
 
