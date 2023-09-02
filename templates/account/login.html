@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+{% block page_titel %}
+    LOGIN PAGE
+{% endblock %}
+
+
+{% block content %}
+
+    <form method="POST" action="">
+
+        <div class="form-outline mb-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary btn-block mb-4" value="LOGIN">
+        </div>
+    </form>
+
+{% endblock %}
+
+
+

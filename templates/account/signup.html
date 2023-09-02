@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+
+{% block page_titel %}
+    SIGNUP PAGE
+{% endblock %}
+
+
+{% block content %}
+    <form method="POST" action="">
+
+        <div class="form-outline mb-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary btn-block mb-4" value="SIGNUP">
+        </div>
+
+    </form>
+
+{% endblock %}
+
